@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('user_profiles', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->string('gender');
-            $table->string('birth_date');
-            $table->string('phone');
-            $table->string('address');
+            $table->string('gender')->nullable();
+            $table->string('birth_date')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
             $table->timestamps();
         });
     }
